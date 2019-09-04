@@ -34,28 +34,28 @@
   </nav>
     <br>
     <div class="container">
-        <form action="cadastrar_prof.php" method="POST">
+        <form action="cadastrar_prof.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                         <div class="input-field col s12">
-                            <input id="nome_usuario" type="text" class="validate" required="required" name="nome_usuario">
+                            <input id="nome_usuario" type="text" class="validate" required="required" name="prof_usu">
                             <label for="nome_usuario">Nome de usuário</label>
                         </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" required="required" name="senha">
+                        <input id="password" type="password" class="validate" required="required" name="prof_senha">
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" required="required" name="email">
+                        <input id="email" type="email" class="validate" required="required" name="prof_email">
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                         <div class="input-field col s12">
-                            <input id="local_trabalho" type="text" class="validate" required="required" name="local_trabalho">
+                            <input id="local_trabalho" type="text" class="validate" required="required" name="prof_localtrabalho">
                             <label for="local_trabalho">Local de trabalho</label>
                         </div>
                 </div>
@@ -63,7 +63,7 @@
                 <div class="file-field input-field">
                 <div class="btn">
                 <span>File</span>
-                <input name="arquivo" type="file" required="required" name="foto_perfil">
+                <input name="arquivo" type="file" required="required" name="prof_foto">
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
                 </div>
