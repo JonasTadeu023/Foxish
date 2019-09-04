@@ -37,25 +37,25 @@
         <form action="cadastrar_prof.php" method="POST">
                 <div class="row">
                         <div class="input-field col s12">
-                            <input id="nome_usuario" type="text" class="validate">
+                            <input id="nome_usuario" type="text" class="validate" required="required" name="nome_usuario">
                             <label for="nome_usuario">Nome de usuário</label>
                         </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
+                        <input id="password" type="password" class="validate" required="required" name="senha">
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" class="validate" required="required" name="email">
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                         <div class="input-field col s12">
-                            <input id="local_trabalho" type="text" class="validate">
+                            <input id="local_trabalho" type="text" class="validate" required="required" name="local_trabalho">
                             <label for="local_trabalho">Local de trabalho</label>
                         </div>
                 </div>
@@ -63,7 +63,7 @@
                 <div class="file-field input-field">
                 <div class="btn">
                 <span>File</span>
-                <input name="arquivo" type="file" required="required" >
+                <input name="arquivo" type="file" required="required" name="foto_perfil">
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
                 </div>
