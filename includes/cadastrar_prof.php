@@ -20,4 +20,16 @@
 
     $result = "INSERT INTO prof (prof_name, prof_senha, prof_email, prof_localtrabalho, prof_foto, data_cadastro) VALUES ('$prof_name', '$prof_senha', '$prof_email', '$prof_localtrabalho', '$prof_foto', NOW())";
     $result_perfil = mysqli_query($conn, $result);
+
+    $pastausu = 'usersprof/'.$prof_name.'/';
+    mkdir($pastausu, 0777);
+
+    if (move_uploaded_file($_FILES['arquivo']['tmp_name'],$pastausu.$prof_foto)) {
+      if ($conn->query($sql) == TRUE) {
+          $_SESSION['status_cadastro'] = true;
+        }
+        $conn->close();
+        header('location: login.html');
+        exit();
+    }
 ?>
