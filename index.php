@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Início</title>
+    <title>Foxish - Início</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -29,9 +29,9 @@
         <a class="logo-conteiner" ><img src="imagens/foxish-original-pure_color.png" style="width: 50px; margin-left: 80px; margin-top:3  px;"></a>
         <a href="#" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="sass.html">Sass</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="badges.html">Components</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="collapsible.html">JavaScript</a></li>
+        <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="Sobre">Sobre</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_aluno.php">Alunos</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor">Professores</a></li>
       </ul>
     </div>
   </nav>
@@ -83,17 +83,8 @@
   </div>
   <br>
   <br>
-  <br>wdfwd
-  <br>weefeedewdwded
-  <br>wefewwe
-  <br>weddw
-  <br>weed
-  <br>dwewe
-  <br><brd>dwed
-  <br>ewd
-  <br>
-  <br>
   </div>
+
   <footer class="page-footer blue-grey darken-2">
           <div class="container">
             <div class="row">
@@ -104,9 +95,9 @@
             </div>
           </div>
           <div class="footer-copyright blue-grey darken-4" >
-            <div class="container">
+            <div class="container" style="color:rgba(251, 176, 45, 1);">
             © 2019 Copyright Black Softweres
-            <a class="grey-text text-lighten-4 right" href="#!">Futuros projetos!</a>
+            <a class="right" style="color: rgba(251, 176, 45, 1);" href="#">Futuros projetos!</a>
             </div>
           </div>
         </footer>
