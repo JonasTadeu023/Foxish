@@ -34,22 +34,22 @@
   </nav>
     <br>
     <div class="container">
-        <form action="cadastrar_aluno.php" method="POST">
+        <form action="cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                         <div class="input-field col s12">
-                            <input id="nome_usuario" type="text" class="validate" name="nome_usuario">
+                            <input id="nome_usuario" type="text" class="validate" name="aluno_nome" required="required">
                             <label for="nome_usuario">Nome de usuário</label>
                         </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" name="senha">
+                        <input id="password" type="password" class="validate" name="aluno_senha" required="required">
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" name="email">
+                        <input id="email" type="email" class="validate" name="aluno_email" required="required">
                         <label for="email">Email</label>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="file-field input-field">
                 <div class="btn">
                 <span>File</span>
-                <input name="arquivo" type="file" required="required" name="foto_perfil">
+                <input name="arquivo" type="file" required="required" name="arquivo" required="required">
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
                 </div>

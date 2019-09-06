@@ -3,7 +3,7 @@
     include('dbh.php');
 
     $prof_name = mysqli_real_escape_string($conn, trim($_POST['prof_usu']));
-    $prof_senha = mysqli_real_escape_string($conn, trim(md5($_POST['prof_usu'])));
+    $prof_senha = mysqli_real_escape_string($conn, trim(md5($_POST['prof_senha'])));
     $prof_email = mysqli_real_escape_string($conn, trim($_POST['prof_email']));
     $prof_localtrabalho = mysqli_real_escape_string($conn, trim($_POST['prof_localtrabalho']));
     $prof_foto = $_FILES['arquivo']['name'];
