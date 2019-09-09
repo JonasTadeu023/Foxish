@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foxish - Início</title>
+    <title>Foxish - Entrar</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -29,15 +29,15 @@
     </div>
   </nav>
 </div>
-
 <div class="conteiner">
-  <div class="container">
-    <div class="row">
-        <div class="col s12 m7">
+  <div class=" container">
+  <!--conteudo-->  
+  <div class="row ">
+        <div class="col s12 m7 center">
             <h5>Login</h5>
             <form action="">
             <div class="conteiner">
-            <div class="row">
+              <div class="row">
                   <div class="input-field col s6">
                     <input placeholder="Placeholder" id="first_name" type="text" class="validate">
                     <label for="first_name">First Name</label>
@@ -59,6 +59,9 @@
       </div>
     </div>
   </div>
+
+
+  <!--footer-->
     <footer class="page-footer blue-grey darken-2">
       <div class="container">
         <div class="row">
@@ -73,6 +76,8 @@
             © 2019 Copyright Black Softweres
             <a class="right" style="color: rgba(251, 176, 45, 1);" href="#">Futuros projetos!</a>
         </div>
+        </div>
+  
   </div>
     </footer>
 </div>
