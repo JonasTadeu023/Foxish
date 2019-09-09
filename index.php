@@ -29,9 +29,9 @@
         <a class="logo-conteiner" ><img src="imagens/foxish-original-pure_color.png" style="width: 50px; margin-left: 80px; margin-top:3  px;"></a>
         <a href="#" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="Sobre">Sobre</a></li>
+        <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="index.php">Sobre</a></li>
         <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_aluno.php">Alunos</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor">Professores</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor.php">Professores</a></li>
       </ul>
     </div>
   </nav>

@@ -24,8 +24,8 @@
         <a href="#" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class=""><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="index.php">Sobre</a></li>
-        <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;color: rgba(251, 176, 45, 1);" href="login_aluno.php">Alunos</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor">Professores</a></li>
+        <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;" href="login_aluno.php">Alunos</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="login_professor.php">Professores</a></li>
       </ul>
     </div>
   </nav>
@@ -57,7 +57,7 @@
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
-                <a href="cadastro_aluno.php" class='right'>Quer se tornar membro de nossa Comunidade? Cadastre-se agora!</a>
+                <a href="cadastro_prof.php" class='right'>Quer se tornar membro de nossa Comunidade? Cadastre-se agora!</a>
         </form>
     </div>
 
