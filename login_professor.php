@@ -37,10 +37,10 @@
 
 
   <div class="container center">
-    <h5>Login para Alunos</h5>
+    <h5>Login para Professores</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
-        <form action="includes_login_alunos.php" method="POST" enctype="multipart/form-data">
+        <form action="includes_login_professores.php" method="POST" enctype="multipart/form-data">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate" name="email" required="required">
                         <label for="email">Email</label>
@@ -57,7 +57,7 @@
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
-                <a href="cadastro_aluno.php" class='right'>Ainda não tem uma conta? Cadastre-se agora!</a>
+                <a href="cadastro_aluno.php" class='right'>Quer se tornar membro de nossa Comunidade? Cadastre-se agora!</a>
         </form>
     </div>
 

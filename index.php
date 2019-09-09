@@ -35,13 +35,17 @@
       </ul>
     </div>
   </nav>
-</div>u
+</div>
 
 <div class="conteiner">
   <div class="container">
 
-  <h5>Example Promotion Table</h5>
-          <p>If we want 3 divs that are equal size, we define the divs with a width of 4-columns, as 4+4+4 nicely adds up to 12. Inside those divs, we can put our content. Take our front page content for example. We've modified it slightly for the sake of this example.</p>
+  <h5>Foxish</h5>
+          <p>O Foxish eh um software para a web desenvolvido por estudantes do ensino medio para auxiliar usuarios a classificarem seu nivel de ingles. 
+            O programa conta comum teste de nivelamento feito com base em diversos testesde diversas escolas ingles do pais, taisquais como CCA, Influx, Fisk, Wizard,etc.</p>
+          
+          <br><br><br><br><br><br><br><br>
+          
           <div class="row">
             <div class="col s4">
               <div class="center promo promo-example">
@@ -65,19 +69,7 @@
               </div>
             </div>
           </div>
-
-        <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
+        <br><br><br><br>
       </div>
     </div>
   </div>
@@ -89,14 +81,14 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text" style="font-size:16px;">Footer Content</h5>
-                <p class="grey-text text-lighten-4" style="font-size:14px;">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text" style="font-size:16px;">Desenvolvido por: </h5>
+                <p class="grey-text text-lighten-4" style="font-size:14px;">Jonas Saldanha, Pedro Dariva, Leon Tassinari e Joao Danilo Zucolotto.</p>
               </div>
             </div>
           </div>
           <div class="footer-copyright blue-grey darken-4" >
             <div class="container" style="color:rgba(251, 176, 45, 1);">
-            © 2019 Copyright Black Softweres
+            © 2019 Copyright Black Softwares
             <a class="right" style="color: rgba(251, 176, 45, 1);" href="#">Futuros projetos!</a>
             </div>
           </div>
