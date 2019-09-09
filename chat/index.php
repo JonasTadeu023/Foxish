@@ -101,20 +101,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row right-align">
-            <div class="col s10 m8 l6 right">
-                <div class="row valign-wrapper">
-                    <div class="chat-field-user">
-                        <span class="black-text flow-text">
-                            This is a square image. Add the "circle" class to it to make it appear circular.
-                        </span>
-                        <div class="seta-user"></div>
-                    </div>
-                    <div class="col s1"></div>
-                </div>
-            </div>
-        </div>
         <div class="row right-align">
             <div class="col s10 m8 l6 right">
                 <div class="row valign-wrapper">
