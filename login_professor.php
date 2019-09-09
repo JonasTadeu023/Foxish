@@ -24,8 +24,8 @@
         <a href="#" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class=""><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="index.php">Sobre</a></li>
-        <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;color: rgba(251, 176, 45, 1);" href="login_aluno.php">Alunos</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor.php">Professores</a></li>
+        <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;" href="login_aluno.php">Alunos</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="login_professor.php">Professores</a></li>
       </ul>
     </div>
   </nav>
@@ -37,10 +37,10 @@
 
 
   <div class="container center">
-    <h5>Login para Alunos</h5>
+    <h5>Login para Professores</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
-        <form action="includes_login_alunos.php" method="POST" enctype="multipart/form-data">
+        <form action="includes_login_professores.php" method="POST" enctype="multipart/form-data">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate" name="email" required="required">
                         <label for="email">Email</label>
@@ -57,7 +57,7 @@
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
-                <a href="cadastro_aluno.php" class='right'>Ainda não tem uma conta? Cadastre-se agora!</a>
+                <a href="cadastro_prof.php" class='right'>Quer se tornar membro de nossa Comunidade? Cadastre-se agora!</a>
         </form>
     </div>
 

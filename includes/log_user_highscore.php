@@ -36,7 +36,7 @@
         }
     }
     else{
-        header("Location: ../public/quiz.php");
+        header("Location: ../quiz.php");
         exit();
     }
 ?>
