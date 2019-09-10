@@ -12,9 +12,9 @@ CREATE TABLE `foxish`.`aluno`
     `aluno_xp` INT
 (9) NOT NULL ,
     `aluno_nivel`INT
-(3) DEFAULT NULL ,
+(3) DEFAULT 1 ,
     `aluno fluencia`ENUM
-('Iniciante','Aprendiz','Mediano','Fluente','GODLIKE') DEFAULT NULL ,
+('Iniciante','Aprendiz','Mediano','Fluente','GODLIKE') DEFAULT 'Iniciante' ,
     `data_cadastro` DATETIME NOT NULL , 
     PRIMARY KEY
 (`aluno_id`)
