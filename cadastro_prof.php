@@ -26,35 +26,41 @@
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class=""><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="index.php">Sobre</a></li>
-            <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;color: rgba(251, 176, 45, 1);" href="login_aluno.php">Alunos</a></li>
-            <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_professor.php">Professores</a></li>
+            <li><a class="active" style="font-family: 'Lexend Giga', sans-serif;font-size:18px ;" href="login_aluno.php">Alunos</a></li>
+            <li><a class="" style="font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);font-size:18px;" href="login_professor.php">Professores</a></li>
         </ul>
 
     </div>
   </nav>
 </div>
-<div class="conteiner">
+<br><br>
   <div class=" container center">
   <!--conteudo--> 
     
   
-    <form action="includes/cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
+    <form action="includes/cadastrar_prof.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="input-field col s12">
-                <input id="nome_usuario" type="text" class="validate" name="aluno_nome" required="required">
+                <input id="nome_usuario" type="text" class="validate" name="prof_usu" required="required">
                 <label for="nome_usuario">Nome de usuário</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="password" type="password" class="validate" name="aluno_senha" required="required">
+                <input id="password" type="password" class="validate" name="prof_senha" required="required">
                 <label for="password">Password</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="aluno_email" required="required">
+                <input id="email" type="email" class="validate" name="prof_email" required="required">
                 <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="local_trabalho" type="text" class="validate" name="prof_localtrabalho" required="required">
+                <label for="local_trabalho">Local de trabalho</label>
             </div>
         </div>
 
@@ -97,4 +103,3 @@
         </footer>
 </div>
 </body>
-</html>
