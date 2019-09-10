@@ -39,7 +39,6 @@ $reg = array();
 while ($row = mysqli_fetch_assoc($result)) {
     $reg[$row['id']] = array($row['enunciado'], $row['op_1'], $row['op_2'], $row['op_3'], $row['op_4'], $row['op_5']);
 }
-var_dump($reg);
 $shuffle = array(1, 2, 3, 4, 5);
 for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
     shuffle($shuffle);
@@ -55,31 +54,32 @@ for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[1]]?>"/>
-				<span><?=$reg[$i][$shuffle[1]]?></span>
+				<span style='color:#404040;' ><?=$reg[$i][$shuffle[1]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[2]]?>"/>
-				<span><?=$reg[$i][$shuffle[2]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[2]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[3]]?>"/>
-				<span><?=$reg[$i][$shuffle[3]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[3]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[4]]?>"/>
-				<span><?=$reg[$i][$shuffle[4]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[4]]?></span>
 			</label>
 		</p>
 		</div>
 		<?php endif;}?>
 		<button class="btn col s10 m10 offset-s1 offset-m1" type='submit' name='submit'>enviar</button>
 		</form>
+		<br><br><br><br><br><br><br>
 	</div>
 </body>
 
