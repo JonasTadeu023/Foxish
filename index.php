@@ -27,7 +27,7 @@
   <nav class="blue-grey darken-4" style="opacity:0.925;">
     <div class="nav-wrapper blue-grey darken-4" style="opacity:0.90;">
         <a class="logo-conteiner" ><img src="imagens/foxish-original-pure_color.png" style="width: 50px; margin-left: 80px; margin-top:3  px;"></a>
-        <a href="#" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
+        <a href="principal.html" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="index.php">Sobre</a></li>
         <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="login_aluno.php">Alunos</a></li>
@@ -41,31 +41,31 @@
   <div class="container">
 
   <h5>Foxish</h5>
-          <p>O Foxish eh um software para a web desenvolvido por estudantes do ensino medio para auxiliar usuarios a classificarem seu nivel de ingles. 
-            O programa conta comum teste de nivelamento feito com base em diversos testesde diversas escolas ingles do pais, taisquais como CCA, Influx, Fisk, Wizard,etc.</p>
+          <p>O Foxish é um software para a web desenvolvido por estudantes do ensino medio para auxiliar usuarios a classificarem seu nivel de inglês. 
+            O site conta com um teste de nivelamento feito com base em diversos meios de avaliação de escolas de inglês do país, tais quais como CCA, Influx, Fisk, Wizard, dentre outras.</p>
           
           <br><br><br><br><br><br><br><br>
           
           <div class="row">
             <div class="col s4">
               <div class="center promo promo-example">
-                <i class="material-icons">flash_on</i>
-                <p class="promo-caption">Speeds up development</p>
-                <p class="light center">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.</p>
+                <i class="material-icons">person</i>
+                <p class="promo-caption">Professores podem se cadastrar</p>
+                <p class="light center">O site permite com que professores se cadastrem e cadastrem testes</p>
               </div>
             </div>
             <div class="col s4">
               <div class="center promo promo-example">
                 <i class="material-icons">group</i>
-                <p class="promo-caption">User Experience Focused</p>
-                <p class="light center">By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.</p>
+                <p class="promo-caption">Cadastro de turmas</p>
+                <p class="light center">O sistema permite que professores cadastrados cirem turmas de alunos.</p>
               </div>
             </div>
             <div class="col s4">
               <div class="center promo promo-example">
-                <i class="material-icons">settings</i>
-                <p class="promo-caption">Easy to work with</p>
-                <p class="light center">We have provided detailed documentation as well as specific code examples to help new users get started.</p>
+                <i class="material-icons">book</i>
+                <p class="promo-caption">Teste de nivelamento</p>
+                <p class="light center">Possuímos um teste de inglês feito com base em diversos testes de escolas de inglês ao redor do país</p>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text" style="font-size:16px;">Desenvolvido por: </h5>
-                <p class="grey-text text-lighten-4" style="font-size:14px;">Jonas Saldanha, Pedro Dariva, Leon Tassinari e Joao Danilo Zucolotto.</p>
+                <p class="grey-text text-lighten-4" style="font-size:14px;">Jonas Saldanha, Pedro Dariva, Leon Tassinari e João Danilo Zucolotto.</p>
               </div>
             </div>
           </div>
