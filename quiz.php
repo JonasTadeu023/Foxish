@@ -31,8 +31,7 @@
 	</center>
 	<div class='container'>
 	<form action='/includes/log_user_highscore.php' method='POST'>
-		<?php
-session_start();
+<?php
 include_once "includes/dbh.php";
 $query = $query = "SELECT * from questao where 1";
 $result = mysqli_query($conn, $query);
@@ -40,6 +39,7 @@ $reg = array();
 while ($row = mysqli_fetch_assoc($result)) {
     $reg[$row['id']] = array($row['enunciado'], $row['op_1'], $row['op_2'], $row['op_3'], $row['op_4'], $row['op_5']);
 }
+var_dump($reg);
 $shuffle = array(1, 2, 3, 4, 5);
 for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
     shuffle($shuffle);
@@ -48,8 +48,8 @@ for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
 		<h6><?=$i?> ) <?=$reg[$i][0]?></h6>
 		<p>
 			<label>
-				<input style='magin-left:200px;' name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[0]]?>"/>
-				<span><?=$reg[$i][$shuffle[0]]?></span>
+				<input  name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[0]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[0]]?></span>
 			</label>
 		</p>
 		<p>
