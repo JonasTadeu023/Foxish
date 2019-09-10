@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,81 +9,8 @@
     <link rel="stylesheet" href="../css/materialize.min.css">
     <script src="../js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <title>chat</title>
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-
-        .chat-body {
-            flex: 1 0 auto;
-
-        }
-
-        .new-message {
-            background-color: lightgrey;
-            background-size: cover;
-            position: sticky;
-            bottom: 0px;
-            padding: 10px;
-        }
-
-        .message-input-div {
-            background-color: white;
-            border-radius: 10px;
-            margin-top: 2.3%;
-        }
-
-        .chat-field-amigo {
-            display: inline-block;
-            position: relative;
-            padding: 5px;
-            margin-left: 10px;
-            border: 2px solid #2196f3;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        .chat-field-user {
-            display: inline-block;
-            position: relative;
-            padding: 5px;
-            margin-right: 10px;
-            border: 2px solid #e0e0e0;
-            background-color: #e0e0e0;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        .seta-amigo {
-            width: 0;
-            height: 0;
-            border-width: 10px 0px 10px 10px;
-            border-style: solid;
-            border-color: #2196f3 transparent transparent transparent;
-            position: absolute;
-            top: -2px;
-            left: 0;
-            transform: translate(-100%, 0);
-        }
-
-        .seta-user {
-            width: 0;
-            height: 0;
-            border-width: 10px 10px 10px 0px;
-            border-style: solid;
-            border-color: #e0e0e0 transparent transparent transparent;
-            position: absolute;
-            top: -2px;
-            right: -20px;
-            transform: translate(-100%, 0);
-        }
-    </style>
+    <link href="../chat/chat.css" rel="stylesheet">
 </head>
 
 <body>

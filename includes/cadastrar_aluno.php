@@ -29,7 +29,7 @@
           $_SESSION['status_cadastro'] = true;
         }
         $conn->close();
-        header('location: login_aluno.html');
+        header('location: ../login_aluno.php');
         exit();
     }
 ?>

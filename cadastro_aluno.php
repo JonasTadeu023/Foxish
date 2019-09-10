@@ -38,7 +38,7 @@
   <!--conteudo--> 
     
   
-    <form action="cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
+    <form action="/includes/cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="input-field col s12">
                 <input id="nome_usuario" type="text" class="validate" name="aluno_nome" required="required">
