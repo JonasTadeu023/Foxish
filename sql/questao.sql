@@ -7,10 +7,13 @@
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT
+= 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone
+= "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,22 +31,34 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `questao`
 --
 
-CREATE TABLE `questao` (
-  `id` int(3) NOT NULL,
-  `enunciado` varchar(550) NOT NULL,
-  `op_1` varchar(250) NOT NULL,
-  `op_2` varchar(250) NOT NULL,
-  `op_3` varchar(250) NOT NULL,
-  `op_4` varchar(250) NOT NULL,
-  `op_5` varchar(250) NOT NULL,
-  `teste_turma` enum('0','1') DEFAULT NULL
+CREATE TABLE `questao`
+(
+  `id` int
+(3) NOT NULL,
+  `enunciado` varchar
+(550) NOT NULL,
+  `op_1` varchar
+(250) NOT NULL,
+  `op_2` varchar
+(250) NOT NULL,
+  `op_3` varchar
+(250) NOT NULL,
+  `op_4` varchar
+(250) NOT NULL,
+  `op_5` varchar
+(250) NOT NULL,
+  `teste_turma` enum
+('0','1') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `questao`
 --
 
-INSERT INTO `questao` (`id`, `enunciado`, `op_1`, `op_2`, `op_3`, `op_4`, `op_5`, `teste_turma`) VALUES
+INSERT INTO `questao` (`
+id`,
+`enunciado
+`, `op_1`, `op_2`, `op_3`, `op_4`, `op_5`, `teste_turma`) VALUES
 (1, 'I think she spent too much money ____ thoses clothes.', 'on', 'in', 'at', 'with', 'without', '0'),
 (2, 'What\'s the _____________________ there today?', 'weather', 'time', 'weather like', 'clime', 'time like', '0'),
 (3, 'There\'s a parking lot _____________ from the bookstore.', 'oposite', 'across', 'around', 'near', 'afar', '0'),
@@ -53,9 +68,19 @@ INSERT INTO `questao` (`id`, `enunciado`, `op_1`, `op_2`, `op_3`, `op_4`, `op_5`
 (7, 'Don\'t put your cup on the _____ of the table – someone will knock it off', 'outside', 'end', 'edge', 'boundary', 'border', '0'),
 (8, 'I don\'t like that noise. ___________ has to do _____________ about it', 'someone / anything', 'someone / something', 'somebody / anything', 'something / anything', 'somebody/something', '0'),
 (9, 'This new printer is recommended as being ___ reliable', 'greatly', 'highly', 'strongly', 'readily', 'incredibly', '0'),
-(10, 'I need to go downtown tomorrow. ____ you ______ me a ride?', 'Was/Take ', 'Was/Give', 'Will/Give', 'Will/Take', 'Will/got', '0'),
-(11, ' I _________ a summer course in New York last year. I _________ how to play the drums and now I _________ in a rock band with my cousins. My brother _________ to go to New York next year and learn how to play the drums too', 'took / learned / am playing / would like', 'take / learn / play / liked', 'am going to take / learned / play / wants', 'did take / learned / playing / does want ', 'taking/learn/am playing/liked', '0'),
-(12, 'My wife Susan and my daughter Stephanie _________ mall rats. They _________ to the mall every week and buy things we do not need. On Saturday, they _________ a bicycle, but they don’t know how to ride a bike! Stephanie always _________ that she _____', 'is / are going / bought / say / likes', 'is / do go / is going to buy / say / likes', 'are / go / did buy / said / liked', 'are / go / bought / says / would like', 'is/going/did buy/says/liked', '0'),
+(10, 'I need to go
+downtown tomorrow
+. ____ you ______ me a ride?', 'Was/Take ', 'Was/Give', 'Will/Give', 'Will/Take', 'Will/got', '0'),
+(11, ' I _________ a summer course in New York last year. I _________ how to play the drums and now I _________ in a rock band
+with my cousins. My brother _________ to go
+to New York
+next year and learn how to play the drums too', 'took / learned / am playing / would like', 'take / learn / play / liked', 'am going to take / learned / play / wants', 'did take / learned / playing / does want ', 'taking/learn/am playing/liked', '0'),
+(12, 'My wife Susan and my daughter Stephanie _________ mall rats. They _________ to the mall every week and buy things we do not need. On Saturday, they _________ a bicycle, but they don’t know how to ride a bike! Stephanie always _________ that she _____', 'is / are going / bought / say / likes', 'is / do go
+/ is going to buy / say / likes', 'are / go
+/ did buy
+/ said / liked', 'are / go
+/ bought
+/ says / would like', 'is/going/did buy/says/liked', '0'),
 (13, 'Selecione a sequência correta', 'When is Mrs. Baker going to finish his report?', 'When is Mrs. Baker going to finish her report?', 'When Mrs. Baker is going finish her report?', 'When\'s Mrs. Baker are going to finish her report?', 'When is Mrs. Baker going finish his report?', '0'),
 (14, 'Selecione a sequência correta', 'Mrs. Lewis usually is tired at the end of the week', 'The Wilsons have always dinner together', 'My parents often are at home on weekends', 'Mr. Thompson never goes out on Mondays and Wednesdays', 'Some people did not had a good 2012', '0'),
 (15, 'Selecione a sequência correta', 'Mr. Davis will give us a video game on Christmas', 'Mr. Davis will give we a video game on Christmas', 'Mr. Davis will give our a video game on Christmas', 'Mr. Davis will give ours a video game on Christmas', 'Mrs. Davis will give yours a video game on Christmas', '0'),
@@ -75,7 +100,8 @@ INSERT INTO `questao` (`id`, `enunciado`, `op_1`, `op_2`, `op_3`, `op_4`, `op_5`
 -- Indexes for table `questao`
 --
 ALTER TABLE `questao`
-  ADD PRIMARY KEY (`id`);
+ADD PRIMARY KEY
+(`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -85,7 +111,8 @@ ALTER TABLE `questao`
 -- AUTO_INCREMENT for table `questao`
 --
 ALTER TABLE `questao`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int
+(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
