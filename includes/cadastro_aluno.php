@@ -18,7 +18,7 @@
       exit();
     }
 
-    $result = "INSERT INTO aluno2 (aluno_name, aluno_senha, aluno_email, aluno_foto, aluno_xp, data_cadastro) VALUES ('$aluno_nome', '$aluno_senha', '$aluno_email', '$aluno_foto', '$XP', NOW())";
+    $result = "INSERT INTO aluno (aluno_name, aluno_senha, aluno_email, aluno_foto, aluno_xp, data_cadastro) VALUES ('$aluno_nome', '$aluno_senha', '$aluno_email', '$aluno_foto', '$XP', NOW())";
     $result_perfil = mysqli_query($conn, $result);
 
     $pastaaluno = 'usersaluno/'.$aluno_nome.'/';
