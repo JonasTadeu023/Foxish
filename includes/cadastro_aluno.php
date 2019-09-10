@@ -8,7 +8,7 @@ $aluno_email = mysqli_real_escape_string($conn, trim($_POST['aluno_email']));
 $aluno_foto = $_FILES['arquivo']['name'];
 $XP = 0;
 
-$sql = "SELECT count(*) as total from aluno2 where aluno_name = '$aluno_nome'";
+$sql = "SELECT count(*) as total from aluno where aluno_name = '$aluno_nome'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
