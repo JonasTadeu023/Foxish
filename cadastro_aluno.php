@@ -37,7 +37,7 @@
   <div class=" container center">
   <!--conteudo-->
   <div class="container center">
-    <h5>Cadastro para Professores</h5>
+    <h5>Cadastro para Alunos</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
     <form action="includes/cadastro_aluno.php" method="POST" enctype="multipart/form-data">
