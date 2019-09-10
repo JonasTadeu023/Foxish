@@ -40,7 +40,7 @@
     <h5>Login para Alunos</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
-        <form action="includes_login_alunos.php" method="POST" enctype="multipart/form-data">
+        <form action="includes/includes_login_aluno.php" method="POST" enctype="multipart/form-data">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate" name="email" required="required">
                         <label for="email">Email</label>

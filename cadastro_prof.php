@@ -76,7 +76,6 @@
                 <input class="file-path validate" type="text">
             </div>
         </div>
-
         <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar<i class="material-icons right">send</i></button>
     </form>
 
