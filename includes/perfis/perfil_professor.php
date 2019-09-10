@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,6 +47,7 @@
         <div class="cont col s3">
             <div class="card">
                 <span class="card-title">Turmas</span>
+                <a href="cadastrar_turmas.php">Cadastrar turmas</a>
             </div>
         </div>
         <div class="cont col s4 iframe-container">
@@ -59,5 +61,3 @@
         </div>
     </div>
 </body>
-
-</html>

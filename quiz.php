@@ -31,8 +31,7 @@
 	</center>
 	<div class='container'>
 	<form action='/includes/log_user_highscore.php' method='POST'>
-		<?php
-session_start();
+<?php
 include_once "includes/dbh.php";
 $query = $query = "SELECT * from questao where 1";
 $result = mysqli_query($conn, $query);
@@ -48,38 +47,39 @@ for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
 		<h6><?=$i?> ) <?=$reg[$i][0]?></h6>
 		<p>
 			<label>
-				<input style='magin-left:200px;' name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[0]]?>"/>
-				<span><?=$reg[$i][$shuffle[0]]?></span>
+				<input  name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[0]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[0]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[1]]?>"/>
-				<span><?=$reg[$i][$shuffle[1]]?></span>
+				<span style='color:#404040;' ><?=$reg[$i][$shuffle[1]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[2]]?>"/>
-				<span><?=$reg[$i][$shuffle[2]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[2]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[3]]?>"/>
-				<span><?=$reg[$i][$shuffle[3]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[3]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
 				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[4]]?>"/>
-				<span><?=$reg[$i][$shuffle[4]]?></span>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[4]]?></span>
 			</label>
 		</p>
 		</div>
 		<?php endif;}?>
 		<button class="btn col s10 m10 offset-s1 offset-m1" type='submit' name='submit'>enviar</button>
 		</form>
+		<br><br><br><br><br><br><br>
 	</div>
 </body>
 
