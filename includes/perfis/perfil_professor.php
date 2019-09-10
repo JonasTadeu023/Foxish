@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-<?php session_start() ?>
+<?php 
+session_start();
+include "../funcoes.php";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/materialize.min.css">
     <script src="../../js/materialize.min.js"></script>
-    <title>Perfil - <?= $_SESSION['usuario'] ?></title>
+    <title>Perfil - <?= pegarNomeProf($_SESSION["usuario_id"])?></title>
     <style>
         html,
         body {
@@ -45,13 +48,13 @@
 <body class="grey">
     <div class="body row">
         <div class="cont col s3">
-            <div class="card">
-                <span class="card-title">Turmas</span>
-                <a href="cadastrar_turmas.php">Cadastrar turmas</a>
+            <div class="card row">
+                <span class="card-title col s12">Turmas</span>
+                <a href="cadastrar_turmas.php" class="btn col s12">Cadastrar turmas</a>
             </div>
         </div>
         <div class="cont col s4 iframe-container">
-            <div class="card-panel white" style="height: 30%;"><h1>Olá <?=$_SESSION["usuario"]?></h1></div>
+            <div class="card-panel white" style="height: 30%;"><h2>Olá <?=pegarNomeProf($_SESSION["usuario_id"])?></h2></div>
             <iframe src="http://localhost/projeto-feira/chat/" class="card-panel white"></iframe>
         </div>
         <div class="cont col s5">

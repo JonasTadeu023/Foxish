@@ -1,4 +1,8 @@
-<?php session_start() ?>
+<?php
+session_start();
+include "../funcoes.php";
+$turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/materialize.min.css">
     <script src="../../js/materialize.min.js"></script>
-    <title>Perfil - <?= $_SESSION['usuario'] ?></title>
+    <title>Perfil - <?= pegarNomeAluno($_SESSION["usuario_id"]) ?></title>
     <style>
         html,
         body {
@@ -26,7 +30,7 @@
             border: 0;
             height: 60%;
             left: 0;
-            position:relative;
+            position: relative;
             top: 0;
             width: 100%;
         }
@@ -44,12 +48,18 @@
 <body class="grey">
     <div class="body row">
         <div class="cont col s3">
-            <div class="card">
+            <div class="card row">
                 <span class="card-title">Turmas</span>
+                <?php for ($i = 1; $i <= count($turmas_aluno); $i++) : ?>
+                    <div class="card-panel btn col s12"><?=pegarNomeTurma($i)?></div>
+                <?php endfor; ?>
+
             </div>
         </div>
         <div class="cont col s4 iframe-container">
-            <div class="card-panel white" style="height: 30%;"><h1>Olá <?=$_SESSION["usuario"]?></h1></div>
+            <div class="card-panel white" style="height: 30%;">
+                <h1>Olá <?= pegarNomeAluno($_SESSION["usuario_id"]) ?></h1>
+            </div>
             <iframe src="http://localhost/projeto-feira/chat/" class="card-panel white"></iframe>
         </div>
         <div class="cont col s5">
