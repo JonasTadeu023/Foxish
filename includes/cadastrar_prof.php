@@ -14,7 +14,7 @@
 
     if ($row['total'] == 1) {
       $_SESSION['Usuario ja existe'] = true;
-      header('location: cadastro_prof.html');
+      header('location: cadastro_prof.php');
       exit();
     }
 
@@ -29,7 +29,7 @@
           $_SESSION['status_cadastro'] = true;
         }
         $conn->close();
-        header('location: login_prof.html');
+        header('location: login_prof.php');
         exit();
     }
 ?>
