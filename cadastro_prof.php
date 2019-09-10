@@ -40,7 +40,7 @@
     <h5>Cadastro para Professores</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
-    <form action="cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
+    <form action="includes/cadastro_prof.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="input-field col s12">
                 <input id="nome_usuario" type="text" class="validate" required="required" name="prof_usu">

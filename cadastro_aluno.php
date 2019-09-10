@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Foxish - Entrar</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screesn,projection"/>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap" rel="stylesheet">
     <script src="js/materialize.js"></script>
@@ -40,10 +40,7 @@
     <h5>Cadastro para Professores</h5>
     <div class="row">
     <h6>Para continuar, preencha os campos abaixo.</h6>
-
-    <form action="cadastrar_aluno.php" method="POST" enctype="multipart/form-data">
-      <h5>Cadastro</h5>
-      <h6>Para se Cadastrar, reencha os campos abaixo:</h6>
+    <form action="includes/cadastro_aluno.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="input-field col s12">
                 <input id="nome_usuario" type="text" class="validate" name="aluno_nome" required="required">
