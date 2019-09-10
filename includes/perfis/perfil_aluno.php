@@ -53,7 +53,6 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
                 <?php for ($i = 1; $i <= count($turmas_aluno); $i++) : ?>
                     <div class="card-panel btn col s12"><?=pegarNomeTurma($i)?></div>
                 <?php endfor; ?>
-
             </div>
         </div>
         <div class="cont col s4 iframe-container">
