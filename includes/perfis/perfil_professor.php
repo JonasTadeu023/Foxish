@@ -2,6 +2,12 @@
 session_start();
 include "../funcoes.php";
 $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
+$usuario = $_SESSION["usuario_id"];
+$sql = mysqli_query($conn, "SELECT * FROM prof WHERE prof_id = '$usuario'");
+  while ($linha = mysqli_fetch_array($sql)) {
+    $foto = $linha['prof_foto'];
+    $prof = $linha['prof_name'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -44,7 +50,11 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
         .cont {
             height: 100%
         }
-    </style>
+
+        .foto {
+            height:300px
+        }
+      </style>
 </head>
 
 <body class="dark-grey">
@@ -66,13 +76,14 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
         <div class="col s4">
             <div class=" card-panel white">
                 <h5>Meu Perfil:</h5>
+                <img class="foto " src=" <?php echo "../usersprof/$prof/$foto";?>">
                 <h6>ID:   <?=$_SESSION['usuario_id']?></h6>
                 <h6>USERNAME:   <?=$_SESSION['usuario_nome']?></h6>
                 <h6>EMAIL:   <?=$_SESSION['usuario_email']?></h6>
                 <h6>NIVEL:   <?=$_SESSION['usuario_nivel']?>  <?=$_SESSION['usuario_fluencia']?></h6>
             </div>
             <div class="card-panel">
-                <h5>Minhas Turmas:</h5>
+                <h5>Minhas Turmas cadastradas:</h5>
                 <?php for ($i = 1; $i <= count($turmas_aluno); $i++): ?>
                     <div class="card-panel btn col s12" onclick="carregarChat('<?=pegarNomeProf($_SESSION['usuario_id'])?>', '<?=$i?>')"><?=pegarNomeTurma($i)?></div>
                 <?php endfor;?>
