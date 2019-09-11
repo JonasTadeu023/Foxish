@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "../funcoes.php";
-
+$turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,6 +11,8 @@ include "../funcoes.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap" rel="stylesheet">
     <script src="../../js/materialize.min.js"></script>
     <title>Perfil - <?=pegarNomeProf($_SESSION["usuario_id"])?></title>
     <style>
@@ -28,9 +30,9 @@ include "../funcoes.php";
 
         .iframe-container iframe {
             border: 0;
-            height: 60%;
+            height: 80%;
             left: 0;
-            position:relative;
+            position: relative;
             top: 0;
             width: 100%;
         }
@@ -45,22 +47,47 @@ include "../funcoes.php";
     </style>
 </head>
 
-<body class="blue-grey  ">
+<body class="dark-grey">
+<div class="navbar-fixed">
+  <nav class="blue-grey darken-4" style="opacity:0.925;">
+    <div class="nav-wrapper blue-grey darken-4" style="opacity:0.90;">
+        <a class="logo-conteiner" ><img src="../../imagens/foxish-original-pure_color.png" style="width: 50px; margin-left: 80px; margin-top:3  px;"></a>
+        <a href="principal.html" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="#">Meu Perfil</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="../../quiz.php">Teste Nivelador</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="../logout.php">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
     <div class="body row">
-        <div class="cont col s3">
-            <div class="card row">
-                <span class="card-title col s12">Turmas</span>
-                <a href="cadastrar_turmas.php" class="btn col s12">Cadastrar turmas</a>
+        <div class="col s4">
+            <div class=" card-panel white">
+                <h5>Meu Perfil:</h5>
+                <h6>ID:   <?=$_SESSION['usuario_id']?></h6>
+                <h6>USERNAME:   <?=$_SESSION['usuario_nome']?></h6>
+                <h6>EMAIL:   <?=$_SESSION['usuario_email']?></h6>
+                <h6>NIVEL:   <?=$_SESSION['usuario_nivel']?>  <?=$_SESSION['usuario_fluencia']?></h6>
+            </div>
+            <div class="card-panel">
+                <h5>Minhas Turmas:</h5>
+                <?php for ($i = 1; $i <= count($turmas_aluno); $i++): ?>
+                    <div class="card-panel btn col s12" onclick="carregarChat('<?=pegarNomeProf($_SESSION['usuario_id'])?>', '<?=$i?>')"><?=pegarNomeTurma($i)?></div>
+                <?php endfor;?>
             </div>
         </div>
-        <div class="cont col s4 iframe-container">
-            <div class="card-panel white" style="height: 15%;"><h2>Olá <?=pegarNomeProf($_SESSION["usuario_id"])?></h2></div>
-            <iframe src="http://localhost/projeto-feira/chat/" class="card-panel white"></iframe>
-        </div>
-        <div class="cont col s5">
-            <div class="card red">
-                <span class="card-title">Testes Disponíveis</span>
-            </div>
+
+        <div class="cont col s4 offset-s4 iframe-container">
+            <iframe src="" id ='chat'  class="card-panel white"></iframe>
         </div>
     </div>
+    <script>
+    var chat = document.getElementById('chat');
+    function carregarChat(usuario, turmaid){
+        chat.src = `http://localhost/projeto-feira/chat/?usuario=${usuario}&turmaid=${turmaid}`;
+    }
+</script>
 </body>
+</html>
