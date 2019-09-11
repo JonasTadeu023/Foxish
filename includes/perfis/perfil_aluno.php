@@ -72,7 +72,7 @@ $sql = mysqli_query($conn, "SELECT * FROM aluno WHERE aluno_id = '$usuario'");
         <div class="col s4">
             <div class=" card-panel white">
                 <h5>Meu Perfil:</h5>
-                <img class="foto " src=" <?php echo "../usersaluno/$prof/$foto";?>">
+                <img class="responsive-img " src=" <?php echo "../usersaluno/$prof/$foto";?>">
                 <h6>ID:   <?=$_SESSION['usuario_id']?></h6>
                 <h6>USERNAME:   <?=$_SESSION['usuario_nome']?></h6>
                 <h6>EMAIL:   <?=$_SESSION['usuario_email']?></h6>
