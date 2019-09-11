@@ -1,5 +1,5 @@
 <?php
-include "../dbh.php";
+include "dbh.php";
 
 function pegarNomeAluno($id){
     global $conn;
@@ -38,4 +38,33 @@ function pegarNomeTurma($id){
     $arr = mysqli_fetch_assoc($result);
    
     return $arr["turma_nome"];
+}
+
+function pegarChat($turmaId){
+    global $conn;
+    $sql = "SELECT id_chat FROM chat WHERE turma_id = '$turmaId'";
+    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $arr = mysqli_fetch_assoc($result);
+   
+    return $arr["id_chat"];
+}
+function pegarNomeChat($id){
+    global $conn;
+    $sql = "SELECT nome_chat FROM chat WHERE id_chat = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $arr = mysqli_fetch_assoc($result);
+   
+    return $arr["nome_chat"];
+}
+
+function carregarMensagens($chatId){
+    global $conn;
+    $sql = "SELECT texto_msg, autor_msg FROM mensagem WHERE id_chat = '$chatId'";
+    $result = mysqli_query($conn, $sql);
+    $mensagens= array();
+    while($arr = mysqli_fetch_assoc($result)){
+        array_push($mensagens, $arr);
+    };
+
+    return $mensagens;
 }

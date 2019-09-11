@@ -30,7 +30,15 @@
             <p>Nome da turma</p>
             <input type="text" name="nome" required="required">
             <br>
-            <p>adicionar alunos</p> 
+            <p>adicionar aluno com o código:</p> 
+            <input type="number" name="id1" >
+            <br>
+            <p>adicionar aluno com o código:</p> 
+            <input type="number" name="id2" >
+            <br>
+            <p>adicionar aluno com o código:</p> 
+            <input type="number" name="id3" >
+            <input type="submit" value="cadastrar turma">
         </form>
     </body>
 </html>

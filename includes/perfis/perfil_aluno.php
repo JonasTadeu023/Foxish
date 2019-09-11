@@ -43,6 +43,7 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
             height: 100%
         }
     </style>
+
 </head>
 
 <body class="grey">
@@ -51,7 +52,7 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
             <div class="card row">
                 <span class="card-title">Turmas</span>
                 <?php for ($i = 1; $i <= count($turmas_aluno); $i++) : ?>
-                    <div class="card-panel btn col s12"><?=pegarNomeTurma($i)?></div>
+                    <div class="card-panel btn col s12" onclick="carregarChat('<?= pegarNomeAluno($_SESSION['usuario_id'])?>', '<?= $i ?>')"><?= pegarNomeTurma($i) ?></div>
                 <?php endfor; ?>
             </div>
         </div>
@@ -59,7 +60,7 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
             <div class="card-panel white" style="height: 30%;">
                 <h1>Olá <?= pegarNomeAluno($_SESSION["usuario_id"]) ?></h1>
             </div>
-            <iframe src="http://localhost/projeto-feira/chat/" class="card-panel white"></iframe>
+            <iframe src="" class="card-panel white" id="chat"></iframe>
         </div>
         <div class="cont col s5">
             <div class="card red">
@@ -68,5 +69,11 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
         </div>
     </div>
 </body>
+<script>
+    var chat = document.getElementById('chat');
+    function carregarChat(usuario, turmaid){
+        chat.src = `http://localhost/projeto-feira/chat/?usuario=${usuario}&turmaid=${turmaid}`; 
+    }
+</script>
 
 </html>
