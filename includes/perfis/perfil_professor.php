@@ -55,7 +55,7 @@ $turmas_aluno = pegarTurmasAluno($_SESSION["usuario_id"]);
         <a href="principal.html" class="brand-logo .foda" style="margin-left: 10px;font-family: 'Lexend Giga', sans-serif;color: rgba(251, 176, 45, 1);">Foxish</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class="active"><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;color: rgba(251, 176, 45, 1);" href="#">Meu Perfil</a></li>
-        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="../../quiz.php">Teste Nivelador</a></li>
+        <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="cadastrar_turmas.php">Cadastrar Turmas</a></li>
         <li><a class="" style="font-family: 'Lexend Giga', sans-serif;font-size:18px;" href="../logout.php">Logout</a></li>
       </ul>
     </div>
