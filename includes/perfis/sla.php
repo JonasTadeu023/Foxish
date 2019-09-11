@@ -1,6 +1,5 @@
 <?php
-      session_start();
-      include('../dbh.php');
+session_start();
+include '../dbh.php';
 
-      echo $_SESSION['ID'];
-?>
+echo $_SESSION['usuario_nome'];

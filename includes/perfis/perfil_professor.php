@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include "../funcoes.php";
 
@@ -12,7 +12,7 @@ include "../funcoes.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/materialize.min.css">
     <script src="../../js/materialize.min.js"></script>
-    <title>Perfil - <?= pegarNomeProf($_SESSION["usuario_id"])?></title>
+    <title>Perfil - <?=pegarNomeProf($_SESSION["usuario_id"])?></title>
     <style>
         html,
         body {
@@ -45,7 +45,7 @@ include "../funcoes.php";
     </style>
 </head>
 
-<body class="grey">
+<body class="blue-grey  ">
     <div class="body row">
         <div class="cont col s3">
             <div class="card row">
@@ -54,7 +54,7 @@ include "../funcoes.php";
             </div>
         </div>
         <div class="cont col s4 iframe-container">
-            <div class="card-panel white" style="height: 30%;"><h2>Olá <?=pegarNomeProf($_SESSION["usuario_id"])?></h2></div>
+            <div class="card-panel white" style="height: 15%;"><h2>Olá <?=pegarNomeProf($_SESSION["usuario_id"])?></h2></div>
             <iframe src="http://localhost/projeto-feira/chat/" class="card-panel white"></iframe>
         </div>
         <div class="cont col s5">
