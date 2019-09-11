@@ -18,45 +18,48 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    $jogador_recorde = 0;
+    $jogador_recorde = 18;
     for ($i = 1; array_key_exists($i, $reg) == true; $i++) {
         if ($post_array[$i] == $reg[$i][5]) {
 
             $jogador_recorde++;
         }
     }
-    $fluencia;
-    $nivel;
-    if ($joagdor_record == 22) {
+    if ($jogador_recorde == 22) {
         $fluencia = 'GODLIKE';
         $nivel = 5;
-    } elseif ($joagdor_record > 19 && $joagdor_record < 22) {
+    }if ($jogador_recorde < 22) {
         $fluencia = 'Fluente';
         $nivel = 4;
-    } elseif ($joagdor_record > 15 && $joagdor_record < 19) {
+    }if ($jogador_recorde < 19) {
         $fluencia = 'Mediano';
         $nivel = 3;
-    } elseif ($joagdor_record > 7 && $joagdor_record < 15) {
+    }if ($jogador_recorde < 15) {
         $fluencia = 'Aprendiz';
         $nivel = 2;
-    } else {
+    }
+    if ($jogador_recorde < 7) {
         $fluencia = 'Iniciante';
         $nivel = 1;
     }
 
-    $id = $reg['usuario_id'];
-    $query = "SELECT aluno_nivel,aluno_fluencia FROM `aluno` WHERE `id` = '$id';";
+    $id = $_SESSION['usuario_id'];
+    $query = "SELECT * FROM `aluno` WHERE `aluno_id` = '$id';";
     $result = mysqli_fetch_assoc(mysqli_query($conn, $query));
-    if ($nivel > $result['aluno_nivel']) {
-        $query = "UPDATE aluno SET aluno_nivel = (int)$nivel, aluno_fluencia = '$fluencia' ;";
+    var_dump($nivel);
+    var_dump($result);
+    if ($nivel < $result['aluno_nivel']) {
+        $query = "UPDATE aluno SET aluno_nivel = $nivel, aluno_fluencia = '$fluencia' where `aluno_id` = '$id';";
         mysqli_query($conn, $query);
         header("Location: perfis/perfil_aluno.php");
         exit();
     } else {
+        echo 'x';
         header("Location: perfis/perfil_aluno.php");
         exit();
     }
 } else {
+    echo 'x';
     header("Location: ../quiz.php");
     exit();
 }
