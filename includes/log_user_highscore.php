@@ -1,7 +1,13 @@
 <?php
 session_start();
-include_once "dbh.php";
 
+include_once "dbh.php";
+$query = $query = "SELECT * from questao where 1";
+$result = mysqli_query($conn, $query);
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $reg[$row['id']] = array($row['enunciado'], $row['op_1'], $row['op_2'], $row['op_3'], $row['op_4'], $row['op_5']);
+}
 if (isset($_POST['submit'])) {
     for ($i = 1; $i < count($_POST); $i++) {
         $name_concatenation = "quest$i";
@@ -13,13 +19,14 @@ if (isset($_POST['submit'])) {
     }
 
     $jogador_recorde = 0;
-    for ($i = 1; array_key_exists($i, $_SESSION) == true; $i++) {
-        if ($post_array[$i] == $_SESSION[$i][5]) {
+    for ($i = 1; array_key_exists($i, $reg) == true; $i++) {
+        if ($post_array[$i] == $reg[$i][5]) {
 
             $jogador_recorde++;
         }
     }
-    exit();
+    $fluencia;
+    $nivel;
     if ($joagdor_record == 22) {
         $fluencia = 'GODLIKE';
         $nivel = 5;
@@ -37,7 +44,7 @@ if (isset($_POST['submit'])) {
         $nivel = 1;
     }
 
-    $id = $_SESSION['usuario_id'];
+    $id = $reg['usuario_id'];
     $query = "SELECT aluno_nivel,aluno_fluencia FROM `aluno` WHERE `id` = '$id';";
     $result = mysqli_fetch_assoc(mysqli_query($conn, $query));
     if ($nivel > $result['aluno_nivel']) {

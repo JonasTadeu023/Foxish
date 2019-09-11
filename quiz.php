@@ -1,5 +1,5 @@
 <?php session_start();
-//if(!isset($_SESSION['nome'])){
+//if(!isset($reg['nome'])){
 //    header("Location: index.php");
 //   exit();
 //}
@@ -37,42 +37,42 @@ $query = $query = "SELECT * from questao where 1";
 $result = mysqli_query($conn, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $_SESSION[$row['id']] = array($row['enunciado'], $row['op_1'], $row['op_2'], $row['op_3'], $row['op_4'], $row['op_5']);
+    $reg[$row['id']] = array($row['enunciado'], $row['op_1'], $row['op_2'], $row['op_3'], $row['op_4'], $row['op_5']);
 }
 $shuffle = array(1, 2, 3, 4, 5);
 for ($i = 1; $i < mysqli_num_rows($result) + 1; $i++) {
     shuffle($shuffle);
     if (true): ?>
 		<div class="card-panel col s12 m6 input-card">
-		<h6><?=$i?> ) <?=$_SESSION[$i][0]?></h6>
+		<h6><?=$i?> ) <?=$reg[$i][0]?></h6>
 		<p>
 			<label>
-				<input  name="quest<?=$i?>" type="radio" value="<?=$_SESSION[$i][$shuffle[0]]?>"/>
-				<span style='color:#404040;'><?=$_SESSION[$i][$shuffle[0]]?></span>
+				<input  name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[0]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[0]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
-				<input name="quest<?=$i?>" type="radio" value="<?=$_SESSION[$i][$shuffle[1]]?>"/>
-				<span style='color:#404040;' ><?=$_SESSION[$i][$shuffle[1]]?></span>
+				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[1]]?>"/>
+				<span style='color:#404040;' ><?=$reg[$i][$shuffle[1]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
-				<input name="quest<?=$i?>" type="radio" value="<?=$_SESSION[$i][$shuffle[2]]?>"/>
-				<span style='color:#404040;'><?=$_SESSION[$i][$shuffle[2]]?></span>
+				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[2]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[2]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
-				<input name="quest<?=$i?>" type="radio" value="<?=$_SESSION[$i][$shuffle[3]]?>"/>
-				<span style='color:#404040;'><?=$_SESSION[$i][$shuffle[3]]?></span>
+				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[3]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[3]]?></span>
 			</label>
 		</p>
 		<p>
 			<label>
-				<input name="quest<?=$i?>" type="radio" value="<?=$_SESSION[$i][$shuffle[4]]?>"/>
-				<span style='color:#404040;'><?=$_SESSION[$i][$shuffle[4]]?></span>
+				<input name="quest<?=$i?>" type="radio" value="<?=$reg[$i][$shuffle[4]]?>"/>
+				<span style='color:#404040;'><?=$reg[$i][$shuffle[4]]?></span>
 			</label>
 		</p>
 		</div>
