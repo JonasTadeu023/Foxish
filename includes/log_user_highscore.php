@@ -25,6 +25,8 @@ if (isset($_POST['submit'])) {
             $jogador_recorde++;
         }
     }
+    $nivel = 0;
+    $fluencia = 0;
     if ($jogador_recorde == 22) {
         $fluencia = 'GODLIKE';
         $nivel = 5;
